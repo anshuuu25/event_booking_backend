@@ -37,7 +37,7 @@ class Booking(db.Model):
 
 
 #......................................................................................login
-
+'''
 login_manager = LoginManager(app)
 # ... other app configurations ...
 
@@ -61,7 +61,7 @@ def logout():
     logout_user()
     # Return a response indicating successful logout
     pass
-
+'''
 #.......................................................................................event
 @app.route('/api/events', methods=['GET'])
 def get_events():
@@ -152,13 +152,13 @@ def delete_event(event_id):
 
 
 @app.route('/api/bookings', methods=['POST'])
-@login_required
+#@login_required
 def create_booking():
     # Implement logic to create a new booking
     pass
 
 @app.route('/api/bookings/<int:booking_id>', methods=['GET'])
-@login_required
+#@login_required
 def get_booking(booking_id):
     # Implement logic to retrieve details of a specific booking
     pass
